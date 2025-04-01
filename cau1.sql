@@ -1,4 +1,4 @@
-﻿if exists(select * from sys.objects where name = 'proc_NhanVien_DuAn_Insert')
+if exists(select * from sys.objects where name = 'proc_NhanVien_DuAn_Insert')
 	drop procedure proc_NhanVien_DuAn_Insert;
 go
 
@@ -135,7 +135,7 @@ begin
 			set @d = DATEADD(day, 1, @d)
 		end
 
-	select *
+	select t1.NgayGiaoViec, ISNULL(t2.SoLuong, 0) as SoLuongNhanVien
 	from	@tblNgay as t1
 			left join (
 				select	NgayGiaoViec, COUNT(MaNhanVien) as SoLuong
@@ -145,6 +145,5 @@ begin
 				group by NgayGiaoViec
 			) as t2
 			on t1.NgayGiaoViec = t2.NgayGiaoViec
-
 end;
 go
