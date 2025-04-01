@@ -29,7 +29,6 @@ BEGIN
 			return;
 		end
 
-
 	-- insert vao bang NhanVien_DuAn
 	begin try
 		insert into NhanVien_DuAn(MaNhanVien, MaDuAn, NgayGiaoViec, MoTaCongViec)
@@ -54,9 +53,6 @@ EXEC proc_NhanVien_DuAn_Insert
 
 SELECT @KetQua AS KetQua
 
-
-
-
 -- cau 2:
 if exists (select * from sys.objects where name = 'proc_DuAn_DanhSachNhanVien')
 	drop procedure proc_DuAn_DanhSachNhanVien;
@@ -79,9 +75,6 @@ end
 go
 
 -- test 2
-
-
-
 
 -- cau 3
 if exists (select * from sys.objects where name = 'proc_NhanVien_TimKiem')
@@ -112,7 +105,6 @@ end
 go
 
 -- test 3
-
 
 -- cau 4
 if exists (select * from sys.objects where name = 'proc_ThongKeGiaoViec')
