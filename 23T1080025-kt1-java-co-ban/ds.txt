@@ -1,0 +1,4 @@
+SVTA001,Nguyễn Đình A,4.5,5.6
+SVTB001,Phạm Viết C,6.7,8.9,9.9
+SVTA002,Phạm Quốc B,9.0,6.7
+SVTB002,Lê Thị D,6.7,8.9,10.0
